@@ -12,10 +12,12 @@ body {
 }
 
 .nr {
-  margin-left: 40px;
+  font-weight: 700;
+  color: #203266;
+  padding-left: 5px;
   width: 70px;
   height: 35px;
-  font-size: 20px;
+  font-size: 30px;
 }
 .gen {
   background-color: red;
@@ -24,8 +26,9 @@ body {
   position: absolute;
   height: 60px;
   font-size: 30px;
-  left: 510px;
-  top: 500px;
+  font-weight: 700;
+  right: 340px;
+  top: 345px;
   box-shadow: 5px 5px 10px 1px #000;
 }
 label {
@@ -33,23 +36,47 @@ label {
   font-size: 25px;
 }
 .symb {
-  margin-left: 40px;
+  margin-top: 0px;
+  margin-left: 50px;
   width: 50px;
   height: 50px;
 }
+.symbol {
+  color: red;
+}
+.red {
+  color: red;
+}
+.blue {
+  color: rgb(47, 0, 235);
+}
+.green {
+  color: rgb(19, 206, 6);
+}
+.yellow {
+  color: rgb(236, 217, 50);
+}
+
 .numb {
-  margin-left: 40px;
+  margin-left: 50px;
   width: 50px;
   height: 50px;
 }
 .control {
+  box-shadow: 5px 5px 10px 1px #000;
+  color: black;
   font-size: 35px;
-  border-radius: 10px;
+  background-color: white;
   width: 575px;
-  padding-left: 20px;
-  height: 80px;
-  margin-left: 400px;
+  align-content: center;
+  height: 70px;
+  margin-left: 650px;
   margin-top: 50px;
+  padding-top: 10px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  border-radius: 10px;
+  letter-spacing: 3px;
 }
 h1 {
   color: white;

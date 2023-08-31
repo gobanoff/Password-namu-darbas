@@ -2,7 +2,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
   const [length, setLength] = useState();
   const [number, setNumber] = useState(true);
   const [symbol, setSymbol] = useState(true);
@@ -54,7 +54,21 @@ function App() {
         Password Generator.
       </h1>
 
-      <input className="control" type="text" value={password} readOnly />
+      <div className="control" value={password}>
+        {password.split("").map((char) => {
+          return symb.includes(char) ? (
+            <span className="red">{char}</span>
+          ) : char && numb.includes(char) ? (
+            <span className="blue">{char}</span>
+          ) : char && upLetters.includes(char) ? (
+            <span className="green">{char}</span>
+          ) : char && lowLetters.includes(char) ? (
+            <span className="yellow">{char}</span>
+          ) : (
+            char
+          );
+        })}
+      </div>
       <input
         className="nr"
         type="number"
@@ -83,7 +97,16 @@ function App() {
       </button>
       <p className="rez">
         {data.map((password, index) => (
-          <p key={index}>{password}</p>
+          <p key={index}>
+            {password.split("").map((char, charIndex) => (
+              <span
+                key={charIndex}
+                className={symb.includes(char) ? "symbol" : ""}
+              >
+                {char}
+              </span>
+            ))}
+          </p>
         ))}
       </p>
     </div>
